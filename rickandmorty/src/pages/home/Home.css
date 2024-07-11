@@ -1,0 +1,17 @@
+body {
+    background: rgb(224,247,250);
+    background: linear-gradient(90deg, rgba(224,247,250,1) 46%, rgba(209,29,253,0.26934523809523814) 100%);
+    color: white;
+  }
+  .homepage-section{
+    padding-left: 18vw;
+    padding-right: 18vw;
+    margin-top: 5vw;
+}
+.slick-prev:before, .slick-next:before {
+    color: rgb(104, 57, 120) !important;
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0) !important;
+}

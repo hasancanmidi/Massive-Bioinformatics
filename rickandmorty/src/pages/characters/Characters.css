@@ -1,0 +1,11 @@
+.characters-page{
+    padding-left: 18vw;
+    padding-right: 18vw;
+}
+.character-details{
+    text-align: center;
+}
+.character-details img{
+    border-radius: 500px;
+    margin-bottom:1rem;
+}

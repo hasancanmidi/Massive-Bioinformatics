@@ -1,0 +1,8 @@
+.header{
+    padding-left: 15vw !important;
+    padding-right: 15vw !important;
+    background: linear-gradient(to right, #00B5E2, #A349A4);
+}
+.header img{
+    width: 15rem;
+}

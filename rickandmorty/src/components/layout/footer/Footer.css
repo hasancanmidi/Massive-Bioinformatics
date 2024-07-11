@@ -1,0 +1,17 @@
+.footer{
+    margin-top: 5rem;
+    padding-left: 15vw !important;
+    padding-right: 15vw !important;
+    background: linear-gradient(to right, #00B5E2, #A349A4);
+}
+
+.footer-logo img{
+    margin-top: 20px;
+    width: 180px !important;
+    height: 100px !important;
+    transition: 0.5s ease;
+}
+
+.footer-text{
+    color: rgb(255, 255, 255);
+}
