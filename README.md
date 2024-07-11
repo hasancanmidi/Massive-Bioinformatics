@@ -1,1 +1,1 @@
-https://massive-bioinformatics.vercel.app/characters
+https://massive-bioinformatics.vercel.app/
