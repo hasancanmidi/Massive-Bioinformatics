@@ -10,38 +10,44 @@ import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 
 function Characters() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCharacter, setSelectedCharacter] = useState(null);
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [searchTerm, setSearchTerm] = useState(''); // Arama terimini yönetmek için state
+  const [selectedCharacter, setSelectedCharacter] = useState(null); // Seçilen karakteri yönetmek için state
+  const [isModalVisible, setIsModalVisible] = useState(false); // Modal görünürlüğünü yönetmek için state
   const dispatch = useDispatch();
-  const characters = useSelector((state) => state.characters.items);
-  const status = useSelector((state) => state.characters.status);
-  const error = useSelector((state) => state.characters.error);
+  const characters = useSelector((state) => state.characters.items); // Redux store'dan karakterleri seç
+  const status = useSelector((state) => state.characters.status); // Redux store'dan durumu seç
+  const error = useSelector((state) => state.characters.error); // Redux store'dan hatayı seç
 
+  // Bileşen yüklendiğinde veya searchTerm değiştiğinde karakterleri getir
   useEffect(() => {
     if (status === 'idle') {
       dispatch(fetchCharacters(searchTerm));
     }
   }, [status, dispatch, searchTerm]);
 
+  // Karakterler yüklenirken gösterilecek içerik
   if (status === 'loading') {
     return <div>Loading...</div>;
   }
 
+  // Karakterler yüklenirken hata oluşursa gösterilecek içerik
   if (status === 'failed') {
     return <div>{error}</div>;
   }
 
+  // Bir karakter seçildiğinde yapılacak işlemler
   const onCharacterSelect = (e) => {
     setSelectedCharacter(e.data);
     setIsModalVisible(true);
   };
 
+  // Modalı gizlemek için fonksiyon
   const hideModal = () => {
     setIsModalVisible(false);
     setSelectedCharacter(null);
   };
 
+  // Seçilen karakterin detaylarını render eden fonksiyon
   const renderCharacterDetails = () => {
     if (!selectedCharacter) return null;
 

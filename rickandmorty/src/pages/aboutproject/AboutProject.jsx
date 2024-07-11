@@ -245,7 +245,7 @@ const AboutProject = () => {
           </code>
         </pre>
         <h4 className="mt-5">Peki bu veriler başka bir component'te lazım olursa?</h4>
-        <p>React uygulamalarında veri yönetimini ve veri paylaşımını daha kolay hale getiren bir yapılar vardır bunlardan en popüler olanları Redux ve Context Api'dir biz bugün Redux'ı kullanacağız. </p>
+        <p>React uygulamalarında veri yönetimini ve veri paylaşımını daha kolay hale getiren yapılar vardır. Bunlardan en popüler olanları Redux ve Context API'dir. Bugün, Redux'ı kullanacağız. Redux'ı kurup dosya yapısını oluşturduktan sonra, Episodes ve Characters için Slice oluşturup axios ile veriyi çekeceğiz. Daha sonra, reducer'ı kullanarak bu API'yi istediğimiz yerde kullanacağız.</p>
       </div>
     </div>
     <Footer/>
